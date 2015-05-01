@@ -2,10 +2,10 @@
 
 one:
   title: MyString
-  text: MyText
-  event_date: 2015-04-29
+  body: MyText
+  event_date: 2015-05-02 02:21:11
 
 two:
   title: MyString
-  text: MyText
-  event_date: 2015-04-29
+  body: MyText
+  event_date: 2015-05-02 02:21:11
