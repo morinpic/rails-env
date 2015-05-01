@@ -1,4 +1,7 @@
 class EventsController < InheritedResources::Base
+  def index
+    @events = Event.limit(5)
+  end
 
   private
 
@@ -6,4 +9,3 @@ class EventsController < InheritedResources::Base
       params.require(:event).permit(:title, :body, :event_date)
     end
 end
-
