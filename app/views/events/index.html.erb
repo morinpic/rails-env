@@ -13,7 +13,7 @@
         <p><% te.title %></p>
         <p><%= te.body %></p>
         <p><%= te.event_date %></p>
-        <p><%= link_to '>> イベント詳細', event_path(te.id) %></p>
+        <p><%= link_to '>> イベント詳細', event_path(te) %></p>
       </div>
     <% end %>
   <% else %>
@@ -31,7 +31,7 @@
       <h2><%= e.title %></h2>
       <p><%= e.body %></p>
       <p><%= e.event_date %></p>
-      <p><%= link_to '>> イベント詳細', event_path(e.id) %></p>
+      <p><%= link_to '>> イベント詳細', event_path(e) %></p>
     </div>
   <% end %>
 </div>
