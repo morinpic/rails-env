@@ -15,4 +15,10 @@
   <%= @event.event_date %>
 </p>
 
+<p>
+  <strong>tag_list:</strong>
+  <%= render partial: 'shared/tags', locals: { tags: @event.tags } if @event.tags.present? %>
+</p>
+
+
 <%= link_to 'Back', events_path %>

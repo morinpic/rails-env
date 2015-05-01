@@ -1,6 +1,7 @@
 class EventsController < InheritedResources::Base
   def index
-    @events = Event.limit(5)
+    @events = Event.all.limit(5)
+    @events = @events.includes(:tags)
   end
 
   private
