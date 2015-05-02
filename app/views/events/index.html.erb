@@ -31,7 +31,14 @@
       <h2><%= e.title %></h2>
       <p><%= e.body %></p>
       <p><%= e.event_date %></p>
-      <%= render partial: 'shared/tags', locals: { tags: e.tags } if e.tags.present? %>
+      <% if e.tags.present? %>
+        <ul>
+          <% e.tags.each do |tag| %>
+            <%= link_to tag.name, events_path(tag: tag.name) %>
+          <% end %>
+        </ul>
+      <% end %>
+      <%#= render partial: 'shared/tags', locals: { tags: e.tags } if e.tags.present? %>
       <p><%= link_to '>> イベント詳細', event_path(e) %></p>
     </div>
   <% end %>

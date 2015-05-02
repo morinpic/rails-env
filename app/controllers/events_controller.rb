@@ -1,6 +1,6 @@
 class EventsController < InheritedResources::Base
   def index
-    @events = Event.all.limit(5)
+    @events = params[:tag].present? ? Event.tagged_with(params[:tag]) : Event.all.limit(5)
     @events = @events.includes(:tags)
   end
 
