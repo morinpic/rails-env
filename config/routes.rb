@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
+
+
   # ActiveAdmin
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :events, only: [:index, :show]
+  resources :homes, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'events#index'
+  root 'homes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

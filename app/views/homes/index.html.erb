@@ -1,0 +1,14 @@
+<h1>Homes#index</h1>
+<p>Find me in app/views/homes/index.html.erb</p>
+
+<% @events.each do |event| %>
+  <p><%= event.title %></p>
+  <p><%= event.body %></p>
+  <p><%= event.event_date %></p>
+  <p><%= link_to '>> 詳細はこちら', event_path(event) %></p>
+<% end %>
+
+<h2>Menu</h2>
+<ul>
+  <li><%= link_to 'Evets', events_path %></li>
+</ul>
