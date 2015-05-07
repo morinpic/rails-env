@@ -68,3 +68,8 @@ group :development, :test do
 
   gem 'newrelic_rpm'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
