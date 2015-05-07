@@ -19,3 +19,5 @@ vendor/bundle
 /log/*
 !/log/.keep
 /tmp
+
+public/assets

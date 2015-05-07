@@ -5,7 +5,8 @@ ruby '2.2.0'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'mysql2', '~> 0.3.18'
+#gem 'mysql2', '~> 0.3.18'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.1'
 # SASS用のMixinライブラリ
@@ -70,6 +71,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end

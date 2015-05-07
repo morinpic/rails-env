@@ -1,11 +1,14 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   pool: 5
-  username: root
-  password:
-  host: localhost
 
 development:
   <<: *default
   database: rails-env_development
+
+production:
+  <<: *default
+  database: rails-env_production
+  username: rails-env
+  password: <%= ENV['RAILS-ENV_DATABASE_PASSWORD'] %>
