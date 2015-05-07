@@ -48,6 +48,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem 'seed-fu'
 gem 'ffaker'
 gem 'just-datetime-picker'
+gem 'google-analytics-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
